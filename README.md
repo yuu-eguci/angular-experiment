@@ -1,4 +1,11 @@
-# AngularExperiment
+angular-experiment
+===
+
+Want to practice angular-cli + SPA + MPA + i18n + import different external css files in each component.
+
+GitHub page is served from https://yuu-eguci.github.io/angular-experiment/
+
+## Description
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
