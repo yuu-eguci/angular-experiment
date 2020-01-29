@@ -122,8 +122,13 @@
               "devServerTarget": "angular-experiment:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-experiment"
 }
