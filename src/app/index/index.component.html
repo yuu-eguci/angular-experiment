@@ -7,7 +7,16 @@
   }
 </style>
 
-<h1>This is index page</h1>
+<!-- NOTE: i18n format - [meaning]|[description]@@[customId] -->
+<!-- NOTE: Each element are not essential, but will be written in xlf. Makes xlf easier to read. -->
+<!-- NOTE: Furthermore it seems that it enables us to use regular expressions for plurals and selections.
+           But now, put it on hold. -->
+<h1 i18n="site header|An introduction header for this sample@@introductionHeader">
+  This is index page
+</h1>
+<p i18n="project name|Project name@@projectName">
+  angular-experiment
+</p>
 <h2>Pages</h2>
 <ul>
   <li>Index page</li>
@@ -20,3 +29,7 @@
   <li>日本語</li>
   <li><a href="#">Română</a></li>
 </ul>
+<!-- NOTE: customId enables us to use the same message for multiple tags. -->
+<p i18n="@@projectName">
+  angular-experiment
+</p>
