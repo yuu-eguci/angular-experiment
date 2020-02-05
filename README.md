@@ -5,6 +5,17 @@ Want to practice angular-cli + SPA + MPA + i18n + import different external css 
 
 GitHub page is served from https://yuu-eguci.github.io/angular-experiment/
 
+## Serve guide
+
+```bash
+# Serve English version
+ng serve
+# Serve Japanese version
+ng serve --configuration=ja
+# Serve Romanian version
+ng serve --configuration=ro
+```
+
 ## Description
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
