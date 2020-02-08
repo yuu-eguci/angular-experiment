@@ -61,6 +61,22 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "ja": {
+              "aot": true,
+              "outputPath": "dist/angular-experiment-ja/",
+              "i18nFile": "src/locale/messages.ja.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ja",
+              "baseHref": "/ja/"
+            },
+            "ro": {
+              "aot": true,
+              "outputPath": "dist/angular-experiment-ro/",
+              "i18nFile": "src/locale/messages.ro.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ro",
+              "baseHref": "/ro/"
             }
           }
         },
@@ -72,6 +88,14 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-experiment:build:production"
+            },
+            "ja": {
+              "browserTarget": "angular-experiment:build:ja",
+              "baseHref": "/ja/"
+            },
+            "ro": {
+              "browserTarget": "angular-experiment:build:ro",
+              "baseHref": "/ro/"
             }
           }
         },
