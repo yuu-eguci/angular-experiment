@@ -1,35 +1,31 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { routes } from './app.routes';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
+      imports: [AppComponent],
+      providers: [provideRouter(routes)],
+    });
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it(`should have as title 'angular-experiment'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('angular-experiment');
+  it('should route /index to the index page', async () => {
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/index');
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('This is index page');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-experiment app is running!');
+  it('should route /page1 to page1', async () => {
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/page1');
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toContain('This is page1');
   });
 });
