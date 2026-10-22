@@ -31,7 +31,6 @@
     "@angular/cli": "^22.2.3",
     "@angular/compiler-cli": "^22.2.0",
     "@angular/localize": "^22.2.0",
-    "angular-cli-ghpages": "^3.1.2",
     "jsdom": "^30.0.0",
     "typescript": "~6.0.2",
     "vitest": "^5.0.0"
