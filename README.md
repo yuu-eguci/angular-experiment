@@ -5,41 +5,29 @@ Want to practice angular-cli + SPA + MPA + i18n + import different external css 
 
 GitHub page is served from https://yuu-eguci.github.io/angular-experiment/
 
-## Serve guide
+## Facts
+
+| Item | Value |
+| --- | --- |
+| Node.js | 24.22.1 LTS (`volta` pins it, `engines` requires `^24.22.1`, `.npmrc` enforces it) |
+| Angular | 22 |
+| Unit test | Vitest via `ng test` |
+| Locales | en (default), ja, ro |
+| CI | GitHub Actions (`.github/workflows/ci.yml`) |
+| ! Docker | Not provided |
+
+## Quickstart
 
 ```bash
-# Serve English version
-ng serve
-# Serve Japanese version
-ng serve --configuration=ja
-# Serve Romanian version
-ng serve --configuration=ro
+npm ci
+# Serve English version on http://localhost:4200/
+npm start
+# Serve Japanese / Romanian version
+npm start -- --configuration=ja
+npm start -- --configuration=ro
+# Unit tests and Node version checks
+npm test -- --watch=false
+npm run test:node
+# Build en into dist/angular-experiment/browser/ and ja / ro into its subdirectories
+npm run build
 ```
-
-## Description
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

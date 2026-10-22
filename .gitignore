@@ -46,3 +46,6 @@ Thumbs.db
 
 # Custom
 documents/
+
+# Angular CLI cache
+/.angular/cache
