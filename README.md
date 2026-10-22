@@ -14,6 +14,7 @@ GitHub page is served from https://yuu-eguci.github.io/angular-experiment/
 | Unit test | Vitest via `ng test` |
 | Locales | en (default), ja, ro |
 | CI | GitHub Actions (`.github/workflows/ci.yml`) |
+| Deploy | Not provided (`gh-pages` branch still holds the 2020 Angular 8 build) |
 | ! Docker | Not provided |
 
 ## Quickstart
@@ -25,7 +26,7 @@ npm start
 # Serve Japanese / Romanian version
 npm start -- --configuration=ja
 npm start -- --configuration=ro
-# Unit tests and Node version checks
+# Unit tests and Node version / dependency checks
 npm test -- --watch=false
 npm run test:node
 # Build en into dist/angular-experiment/browser/ and ja / ro into its subdirectories
